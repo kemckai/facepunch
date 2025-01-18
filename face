@@ -1,0 +1,35 @@
+-punch/styles.css */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0b0b0b;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: white; /* Set text color to white */
+}
+
+img {
+    width: 300px; /* Size as needed */
+    transition: all 0.3s ease;
+}
+
+.punch {
+    position: absolute;
+    width: 50px; /* Adjust size as necessary */
+    height: 50px;
+    background: url('punch-icon.png') no-repeat center center; /* Ensure this path is correct */
+    background-size: cover;
+    opacity: 0; /* Start with opacity 0 to ensure it's invisible */
+    pointer-events: none; /* Prevent mouse events */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    z-index: 10; /* Ensure it appears above other content */
+}
+
+.punch.visible {
+    opacity: 1; /* Make visible when the 'visible' class is added */
+}
